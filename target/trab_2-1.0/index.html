@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Controle de Referências</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <script src="js/controlar_html.js"></script>
+    <script type="text/javascript" src="js/ajax.js"></script>
+ </head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    Trabalho 2 
+                </li>
+                <li id="mudarPraBusca">
+                    <a href="#">Busca</a>
+                </li>
+                <li id="mudarPraCatalogacao">
+                    <a href="#" >Catalogação</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Esconder Menu</a>
+                    
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div id='idBusca'>
+                    <table id="tabelaBusca" class="center"  border="0">
+                    <tr> 
+                         <td></td>
+
+                         <td>
+                            <h1 class='text-right' >Busca</h1>
+                         </td>
+                         <td>
+                         </td>
+                    </tr>
+                    <tr></tr>
+                    <tr>
+                         <td class="alinha_direita">
+                             Patrimônio
+                         </td>
+                         <td colspan="2">
+                             <input type="number" id="idpatrimonio2" min="1"/>
+                         </td>
+                         <td>
+                         </td>
+                     </tr>
+
+                     <tr>
+                         <td class="alinha_direita">
+                             Título
+                         </td>
+                         <td colspan="2">
+                             <input type="text"     id="idtitulo2"/>
+                         </td>
+                         <td>
+                         </td>
+                     </tr>
+
+                     <tr>
+                         <td class="alinha_direita">
+                             Autoria
+                         </td>
+                         <td colspan="2">
+                             <input type="text"     id="idautoria2"/>
+                         </td>
+                         <td>
+                         </td>
+                     </tr>
+
+                     <tr>
+                         <td class="alinha_direita">
+                             Veículo
+                         </td>
+                         <td colspan="2">
+                             <input type="text"     id="idveiculo2"/>
+                         </td>
+                         <td>
+                         </td>
+                     </tr>
+
+                     <!--tr>
+                         <td class="alinha_direita">
+                             Data da publicação
+                         </td>
+                         <td>
+                             &nbsp;&nbsp;&nbsp;&nbsp;
+                             de:  <input type="text"    id="iddatapublicacao21"/>
+                         </td>
+                         <td>
+                             &nbsp;&nbsp;
+                             até: <input type="text"    id="iddatapublicacao22"/>
+                         </td>
+                         <td class="alinha_esquerda">
+                         </td>
+                     </tr>
+
+                     <tr>
+                         <td class="alinha_direita">
+                             Palavras-chave
+                         </td>
+                         <td colspan="2">
+                             <input type="text"     id="idpalchave2"/>
+                         </td>
+                         <td class="alinha_esquerda">
+                         </td>
+                     </tr-->
+
+                     <tr>
+                         <td></td>
+                         <td colspan="2" style="text-align:center;">
+                             <input type="button" class="botoes" value="Buscar" id="idBuscar"/>
+                             <input type="button" class="botoes" value="Limpar" id="idLimparBusca"/>
+                             <input type="button" class="botoes" value="Apresentar Tudo" id="idApresentarTudo"/>
+                         </td>
+                         <td></td>
+                     </tr>
+
+                     <tr>
+                         <td class="alinha_direita">
+                             Resultados
+                         </td>
+                         <td colspan="3">
+                             &nbsp;
+                         </td>
+                     </tr>
+
+                     <tr>
+                         <td colspan="4">
+                             <div id="idTabelaResultados">
+                                 &nbsp;
+                             </div>
+                         </td>
+                     </tr>
+
+                     <tr>
+                         <td></td>
+                         <td colspan="2" style="text-align:center;">
+                             Nro. de registros encontrados: 
+                             <div id="idNroRows"></div>
+                         </td>
+                         <td></td>
+                     </tr>
+
+                 </table>
+                 </div>        
+                         <!-- _________________________________________________________________________-->
+                    <div id='idCatalogacao' style="display:none">
+                    <table id="tabelaCatalogacao" class="center" border="0">
+                    
+                    <h1 class='text-center' >Catalogação</h1>
+                   
+                    <tr>
+                        <td id="idMsgDialogo3" colspan="3">
+                            
+                        </td>
+                    </tr>
+                
+                    <tr>
+                    
+                        <td class="alinha_direita">
+                            <input type="hidden" value="Anterior" id="idItemAnterior" class="botoesProxAnt"/>
+                            &nbsp;Patrimônio                    
+                        </td>
+                        
+                        <td>
+                            <input type="number" id="idpatrimonio3" readonly/> 
+                         
+                        </td>
+                        
+                        <td class="alinha_esquerda">
+                            
+                        <input type="hidden" value="Próximo" id="idItemProximo" class="botoesProxAnt"/>
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td class="alinha_direita">
+                            Título
+                        </td>
+                        
+                        <td>
+                            <input type="text" id="idtitulo3"/>
+                        </td>
+                    
+                        <td>                    
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="alinha_direita">
+                            Autoria
+                        </td>
+                    
+                        <td>
+                            <input type="text" id="idautoria3"/>
+                        </td>
+                    
+                        <td>                    
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="alinha_direita">
+                            Veículo
+                        </td>
+                        <td>
+                            <input type="text" id="idveiculo3"/>
+                        </td>
+                        
+                        <td>
+                        </td>
+                    </tr>
+                    
+                    <!--tr>
+                        <td class="alinha_direita">
+                            Data da publicação
+                        </td>
+                        <td >
+                            <input type="text" id="iddatapublicacao3">
+                            
+                        </td>
+                        <td></td>
+                        
+                    </tr>
+                
+                    <tr>
+                        <td class="alinha_direita">
+                            Palavras-chave
+                        </td>
+                        <td>
+                            <input type="text" id="idpalchave3" />
+                        </td>
+                        <td>
+                        </td>
+                    </tr-->
+                
+                    <tr>
+                        <td>
+                        </td>
+                    
+                        <td style="text-align:center;vertical-align:bottom;">
+                            <input type="button" class="botoes" id="idEditar" value="Ir para Edição"/>
+                            <input type="hidden" class="botoes" id="idSalvarAtual" value="Salvar Modificações"/>
+                            <input type="button" class="botoes" id="idAdicionarNovo" value="Adicionar Novo"/>
+                        </td>
+                    
+                        <td>                    
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td></td>
+                    
+                        <td style="text-align:center;vertical-align:bottom;">
+                            <input type="button" class="botoes" id="idLimparCat" value="Limpar"/>
+                            <input type="hidden" class="botoes" id="idExcluir" value="Excluir"/>
+                        </td>
+                        <td >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td id='idMostrarBotaoBusca' style="text-align:center;vertical-align:bottom;">
+                            <input type="hidden" class="botoes" id="idBuscarEdicao" value="Buscar para Edição" />
+                        </td>
+                        <td></td>
+                    </tr>
+                    </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap stufs -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>

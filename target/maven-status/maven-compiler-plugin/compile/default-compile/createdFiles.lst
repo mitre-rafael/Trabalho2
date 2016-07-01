@@ -1,0 +1,12 @@
+trabalho2/DTOs/ReferenciaBibliografica.class
+trabalho2/DAO/ReferenciasBibliograficas.class
+servlets/ServletEdicao.class
+servlets/ServletCatalogacao.class
+trabalho2/utils/Utils.class
+trabalho2/DTOs/RespostaCompletaDTO.class
+trabalho2/DTOs/ListaDeReferencias.class
+trabalho2/DAO/BaseDAO.class
+servlets/ServletApresentarTudo.class
+servlets/ServletExclusao.class
+servlets/ServletBuscar.class
+trabalho2/DTOs/DadosDaBusca.class
